@@ -2,7 +2,6 @@ package com.simple.spring.boot.services;
 
 import com.simple.spring.boot.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.AbstractDataSource;
 import org.springframework.stereotype.Component;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -21,9 +20,9 @@ public class DatabaseService {
                 person.getId(), person.getName().getFirstName(), person.getName().getLastName(), person.getAge());
     }
 
-/*    public void selectPersonData(){
+    public void selectPersonData(){
         jdbcTemplate.execute("SELECT * FROM PERSON");
-    }*/
+    }
 }
 
 

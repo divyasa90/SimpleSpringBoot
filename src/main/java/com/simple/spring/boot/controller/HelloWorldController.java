@@ -32,10 +32,12 @@ public class HelloWorldController {
             return "Error adding person: " + e.getMessage();
         }
     }
-/*    @GetMapping("/selectPersonData")
+    @GetMapping("/selectPersonData")
     public String selectPersonData(){
-        dbService.selectPersonData();
-        return "Person Data: " + person.get;
-    }*/
+        try {
+            dbService.selectPersonData();
+            return "Person Data: ";
+        }catch (Exception e){return "No data found";}
+    }
 }
 
