@@ -13,10 +13,10 @@ public class DatabaseService {
 
     public void createTables() {
         jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS PERSON (id INT PRIMARY KEY," +
-                "first name VARCHAR(255),last name VARCHAR(255),age INT)");
+                "first_name VARCHAR(255),last_name VARCHAR(255),age INT)");
     }
     public void addPerson(Person person) {
-        jdbcTemplate.update("INSERT INTO PERSON (id, \"first name\", \"last name\", age) VALUES (?, ?, ?, ?)",
+        jdbcTemplate.update("INSERT INTO PERSON (id, first_name, last_name, age) VALUES (?, ?, ?, ?)",
                 person.getId(), person.getName().getFirstName(), person.getName().getLastName(), person.getAge());
     }
 
